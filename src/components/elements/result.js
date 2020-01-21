@@ -1,5 +1,4 @@
 import React from 'react';
-import ButtonGroup from './buttonGroup';
 import PropTypes from "prop-types"
 
 const ResultElement = (props) => (

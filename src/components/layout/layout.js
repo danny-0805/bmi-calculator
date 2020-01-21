@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex flex-wrap my-8">
-      <div className="w-full sm:w-1/2 md:w-1/3 ml-auto mr-auto py-4 text-center border border-gray-500">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 ml-auto mr-auto py-4 text-center border border-gray-500">
         <Header siteTitle={data.site.siteMetadata.title} />
         <div>
           <main>{children}</main>

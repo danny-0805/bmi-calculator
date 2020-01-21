@@ -20,19 +20,23 @@ const IndexPage = () => {
     setBMI(0);
   }
 
-  const handleChange = (type, quantity) => {
-    if (type === 'weight') {
-      setWeight(quantity);
-      getBMI(quantity, heightFt, heightIn, unit);
+  const handleChange = (type, realQuantity) => {
+    const quantity = isNaN(realQuantity) ? 0 : realQuantity;
+
+    if (type === 'unit') {      
+      setUnit(quantity);
+      getBMI(weight, heightFt, heightIn, quantity);
+    } else if (isNaN(quantity)) {
+      return;
     } else if (type === 'ft') {
       setHeightFt(quantity);
       getBMI(weight, quantity, heightIn, unit);
     } else if (type === 'in') {
       setHeightIn(quantity);
       getBMI(weight, heightFt, quantity, unit);
-    } else if (type === 'unit') {
-      setUnit(quantity);
-      getBMI(weight, heightFt, heightIn, quantity);
+    } else if (type === 'weight') {
+      setWeight(quantity);
+      getBMI(quantity, heightFt, heightIn, unit);
     }
   }
 
@@ -56,9 +60,9 @@ const IndexPage = () => {
         heightFt={heightFt}
         heightIn={heightIn}
         setUnit={(qt) => handleChange('unit', qt)}
-        setWeight={(qt) => handleChange('weight', qt)}
-        setHeightFt={(qt) => handleChange('ft', qt)}
-        setHeightIn={(qt) => handleChange('in', qt)}
+        setWeight={(qt) => handleChange('weight', parseInt(qt, 10))}
+        setHeightFt={(qt) => handleChange('ft', parseInt(qt, 10))}
+        setHeightIn={(qt) => handleChange('in', parseInt(qt, 10))}
       />
       <Result bmi={bmi} />
       <ResetButton handleReset={handleReset} />

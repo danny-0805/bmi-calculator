@@ -11,6 +11,7 @@ const PhysicalInput = (props) => {
         caption="Weight"
         unit="lbs"
         amount={weight}
+        handleChange={(e) => props.setWeight(e.target.value)}
         handleIncrease={() => props.setWeight(weight + 1)}
         handleDecrease={() => props.setWeight(weight >= 1 ? weight - 1 : 0)}
       />
@@ -18,6 +19,7 @@ const PhysicalInput = (props) => {
         caption="Height"
         unit="ft"
         amount={heightFt}
+        handleChange={(e) => props.setHeightFt(e.target.value)}
         handleIncrease={() => props.setHeightFt(heightFt + 1)}
         handleDecrease={() => props.setHeightFt(heightFt >= 1 ? heightFt - 1 : 0)}
       />
@@ -25,6 +27,7 @@ const PhysicalInput = (props) => {
         caption=""
         unit="in"
         amount={heightIn}
+        handleChange={(e) => props.setHeightIn(e.target.value)}
         handleIncrease={() => props.setHeightIn(heightIn < 11 ? heightIn + 1 : 0)}
         handleDecrease={() => props.setHeightIn(heightIn >= 1 ? heightIn - 1 : 0)}
       />
