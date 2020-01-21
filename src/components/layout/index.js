@@ -1,2 +1,5 @@
-export * as Header from './header.js';
-export * as Layout from './layout.js';
+import Header from './header.js';
+import Footer from './footer.js';
+import Layout from './layout.js';
+
+export { Header, Layout, Footer };
