@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const PInput = (props) => (
   <div className="flex flex-wrap px-4 py-3 border-b border-gray-400">
     <div className="w-6/12 text-left">{props.caption}</div>
-    <div className="w-6/12 text-right flex flex-wrap">
+    <div className="w-6/12 text-right flex flex-wrap justify-end">
       <input className="w-8 text-gray-500" type="text" placeholder="-" value={props.amount} onChange={props.handleChange}/>
       <span className="mr-2 text-gray-500 w-6 block">{`${props.unit}`}</span>
       <ButtonGroup
