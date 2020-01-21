@@ -8,14 +8,14 @@ import Result from "../components/result"
 
 const IndexPage = () => {  
   const [unit, setUnit] = useState('us');
-  const [weight, setWeight] = useState(0);
-  const [heightFt, setHeightFt] = useState(0);
+  const [weight, setWeight] = useState(150);
+  const [heightFt, setHeightFt] = useState(5);
   const [heightIn, setHeightIn] = useState(0);
   const [bmi, setBMI] = useState('');
 
   const handleReset = () => {
-    setWeight(0);
-    setHeightFt(0);
+    setWeight(150);
+    setHeightFt(5);
     setHeightIn(0);
     setBMI(0);
   }
