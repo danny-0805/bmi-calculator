@@ -123,6 +123,7 @@ input {
 input[type="text"] {
   text-align: right;
   margin-right: 4px;
+  padding-right: 4px;
 }
 
 button,
